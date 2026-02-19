@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE OATH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="navbar">
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <img id="navimg" src="img2.jpg" alt="logo">
+
+    <div class="rightside">
+      <input type="text" class="search-box" placeholder="Search">
+      <span class="blink">...!!</span>
+      <img id="propic" src="profilepic.png" alt="">
+    </div>
+
+  </div>
+
+
+  <!-- <video autoplay muted loop playsinline id="vid">
+    <source src="introvid.mp4" type="video/mp4">
+  </video> -->
+
+ <!-- <video autoplay muted playsinline class="vid" id="vid1">
+  <source src="introvid.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted playsinline class="vid" id="vid2">
+  <source src="introvid1.mp4" type="video/mp4">
+</video>
+
+
+
+
+ <script>
+  const v1 = document.getElementById("vid1");
+  const v2 = document.getElementById("vid2");
+
+  let active = 1;
+  const fadeTime = 1;   // seconds before switch
+  const loopPoint = 5; // your loop duration
+
+  function checkTime() {
+    if (active === 1 && v1.currentTime >= loopPoint - fadeTime) {
+      v2.currentTime = 0;
+      v2.play();
+
+      v2.style.opacity = 1;
+      v1.style.opacity = 0.5;
+
+      active = 2;
+    }
+
+    if (active === 2 && v2.currentTime >= loopPoint - fadeTime) {
+      v1.currentTime = 0;
+      v1.play();
+
+      v1.style.opacity = 1;
+      v2.style.opacity = 0.5;
+
+      active = 1;
+    }
+  }
+
+  setInterval(checkTime, 100);
+</script> -->
+
+
+
+
+<video id="vid" class="vid" autoplay muted playsinline>
+  <source src="introvid.mp4" type="video/mp4">
+</video>
+
+<script>
+  const video = document.getElementById("vid");
+  const loopTime = 5; 
+
+  video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= loopTime) {
+      video.currentTime = 0;
+      video.play();
+    }
+  });
+</script>
+
+
+
+
+</body>
+
+</html>
